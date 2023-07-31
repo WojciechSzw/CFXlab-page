@@ -1,2 +1,2 @@
 # CFXlab-page
-Website for CFX laboratory - dental technical
+Website for CFX laboratory - dental technology firm
