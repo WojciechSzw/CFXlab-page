@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="wojciechszwarc" />
+    <meta name="description" content="cfxlabpage" />
+    <title>CFX Lab</title>
+    <link rel="icon" href="images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <nav class="topbar-flex background-fade">
+      <a href="index.html">
+        <header class="logo-grid">
+          <img class="logo-img" src="images/logo.png" alt="logopng" />
+          <h1 class="logo-h1">CFX</h1>
+          <h2 class="logo-h2">Pracownia technik dentystycznych</h2>
+        </header>
+      </a>
+      <ul class="nav-list" id="nav-list">
+        <li><a href="offer.html">Oferta</a></li>
+        <li><a href="gallery.html">Galeria</a></li>
+        <li><a href="team.html">Zespół</a></li>
+        <li><a href="contact.html">Kontakt</a></li>
+      </ul>
+
+      <a class="menu-button" id="menu-button"
+        ><i class="fa-solid fa-bars fa-2xl"></i
+      ></a>
+    </nav>
+    <figure class="full-page-responsive-photo">
+      <img src="images/homemainimg.jpg" alt="homemainimg" />
+      <h1>
+        Zmieniamy świat na lepsze <br />
+        dzięki graniu w minecraft.
+      </h1>
+    </figure>
+    <script>
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          var container = document.getElementById("nav-list");
+          if (container.style.visibility === "hidden") {
+            container.style.visibility = "visible";
+            document.getElementById("menu-button").style.right = "70px";
+          } else {
+            container.style.visibility = "hidden";
+            document.getElementById("menu-button").style.right = "15px";
+          }
+        });
+    </script>
+  </body>
+</html>
