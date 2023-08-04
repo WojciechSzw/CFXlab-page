@@ -1,0 +1,14 @@
+:root {
+  --main-color-first: white;
+  --main-color-second: #53fc1b;
+  --side-color-first: rgb(32, 40, 43);
+  --side-color-second: #a3d9f9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: monospace, "Times New Roman", Times, serif;
+}

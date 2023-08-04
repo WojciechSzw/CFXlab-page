@@ -1,7 +1,8 @@
 :root {
-  --main-color-first: white /*#a3d9f9*/;
+  --main-color-first: white;
   --main-color-second: #53fc1b;
   --side-color-first: rgb(32, 40, 43);
+  --side-color-second: #a3d9f9;
 }
 
 * {
@@ -47,7 +48,7 @@
 }
 
 .nav-fade {
-  background: rgba(20, 20, 20, 0.375);
+  background: rgb(28, 27, 27);
 }
 
 body {
@@ -56,6 +57,9 @@ body {
 }
 
 .topbar-flex {
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -114,11 +118,14 @@ body {
   list-style-type: none;
   padding-top: 10px;
   padding-bottom: 10px;
+  margin-bottom: 2px;
 }
 
-.nav-list > li > a:hover {
-  border-bottom: 2px solid var(--main-color-second);
+.nav-list > li > a:hover:not(.nav-chosen) {
+  margin-bottom: 0px;
+  border-bottom: solid 2px var(--main-color-second);
 }
+
 .menu-button {
   color: var(--main-color-second);
   position: absolute;
@@ -131,7 +138,24 @@ body {
 }
 
 .nav-chosen {
+  border-top: 2px solid transparent;
   border-bottom: 2px solid var(--main-color-second);
+}
+
+.page-title {
+  color: var(--main-color-first);
+  margin: 200px auto 50px;
+  text-align: center;
+  font-size: 50px;
+}
+
+.page-undertitle {
+  width: 90%;
+  max-width: 1100px;
+  color: var(--main-color-first);
+  margin: 0px auto 30px;
+  text-align: left;
+  font-size: 30px;
 }
 
 .full-page-responsive-photo {
@@ -187,7 +211,7 @@ body {
 
   .nav-list {
     width: 140px;
-    height: calc(100% - 80px);
+    height: calc(100vh - 80px);
     position: absolute;
     top: 80px;
     right: 0px;
@@ -205,11 +229,7 @@ body {
   }
 
   .nav-list > li > a {
-    border-bottom: solid 2px rgba(255, 255, 255, 0);
-  }
-
-  .nav-list > li > a:hover {
-    border-bottom: solid 2px var(--main-color-second);
+    margin-bottom: 2px;
   }
 
   #nav-list {
@@ -225,6 +245,19 @@ body {
     right: 15px;
     display: block;
     visibility: visible;
+  }
+
+  .page-title {
+    margin: 150px auto 30px;
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .page-undertitle {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0px auto 30px;
+    font-size: 25px;
   }
 
   .full-page-responsive-photo {
