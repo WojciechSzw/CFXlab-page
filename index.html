@@ -16,7 +16,7 @@
     />
   </head>
   <body>
-    <nav class="topbar-flex background-fade">
+    <nav class="topbar-flex nav-fade">
       <a href="index.html">
         <header class="logo-grid">
           <img class="logo-img" src="images/logo.png" alt="logopng" />
@@ -36,11 +36,8 @@
       ></a>
     </nav>
     <figure class="full-page-responsive-photo">
-      <img src="images/homemainimg.jpg" alt="homemainimg" />
-      <h1>
-        Zmieniamy świat na lepsze <br />
-        dzięki graniu w minecraft.
-      </h1>
+      <img src="images/homemainimg.png" alt="homemainimg" />
+      <h1>Laboratorium z pasją.</h1>
     </figure>
     <script>
       document
@@ -49,10 +46,8 @@
           var container = document.getElementById("nav-list");
           if (container.style.visibility === "hidden") {
             container.style.visibility = "visible";
-            document.getElementById("menu-button").style.right = "70px";
           } else {
             container.style.visibility = "hidden";
-            document.getElementById("menu-button").style.right = "15px";
           }
         });
     </script>
