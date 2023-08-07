@@ -1,5 +1,5 @@
 :root {
-  --main-color-first: white;
+  --main-color-first: #c41bfc;
   --main-color-second: #53fc1b;
   --side-color-first: rgb(32, 40, 43);
   --side-color-second: #a3d9f9;
@@ -11,4 +11,76 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: monospace, "Times New Roman", Times, serif;
+}
+
+section {
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 0 auto 50px auto;
+  flex-direction: row;
+}
+
+table {
+  margin: 0 5% 5% 5%;
+  width: 90%;
+  border-collapse: collapse;
+}
+
+table td:nth-child(even) {
+  text-align: center;
+}
+
+.contact-item {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  height: fit-content;
+  min-height: 0;
+}
+
+.contact-item > h3 {
+  color: var(--main-color-first);
+  width: 90%;
+  margin: 5%;
+}
+
+.contact-granditem > a {
+  color: var(--side-color-second);
+  margin: 0 5% 5%;
+}
+
+#mail > a {
+  margin-bottom: 5.6%;
+}
+
+.contact-granditem > a:hover {
+  color: var(--main-color-second);
+}
+
+iframe {
+  width: 90%;
+  position: relative;
+  margin: 0 5%;
+  aspect-ratio: 1/1;
+}
+
+.contact-granditem {
+  width: 90%;
+  display: flex;
+  orientation: row;
+  justify-content: space-between;
+}
+
+#icons {
+  justify-content: center;
+}
+
+.contact-writeMail {
 }

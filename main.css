@@ -1,5 +1,5 @@
 :root {
-  --main-color-first: white;
+  --main-color-first: #c41bfc;
   --main-color-second: #53fc1b;
   --side-color-first: rgb(32, 40, 43);
   --side-color-second: #a3d9f9;
@@ -147,6 +147,7 @@ body {
   margin: 200px auto 50px;
   text-align: center;
   font-size: 50px;
+  width: 100%;
 }
 
 .page-undertitle {
