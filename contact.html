@@ -72,6 +72,7 @@
             <td></td>
           </tr>
         </table>
+        <hr />
         <h3>Skontaktuj się:</h3>
         <div class="contact-granditem" id="nrtel">
           <p>Zadzwoń:</p>
@@ -86,9 +87,17 @@
         </div>
         <div class="contact-granditem" id="mail">
           <p>Napisz mail:</p>
-          <a href="#" title="kliknij aby skopiować">mail@mail.com</a>
+          <a
+            onclick="
+          alert('skopiowano')
+          "
+            href="#"
+            title="kliknij aby skopiować"
+            >mail@mail.com</a
+          >
         </div>
-        <h3>Social media:</h3>
+        <hr />
+        <h3>Dołącz do nas:</h3>
         <div class="contact-granditem" id="icons">
           <a href="https:instagram.com">
             <i
@@ -114,7 +123,33 @@
           referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
       </div>
-      <div class="contact-writeMail"></div>
+
+      <div class="contact-writeMail">
+        <hr />
+        <h3>Skontaktuj się z nami za pomocą formularza:</h3>
+        <form action="send_mail.php">
+          <label for="imie">Imię i nazwisko:</label>
+          <input type="text" name="imie" id="imie" placeholder="(opcjonalne)" />
+          <label for="mail">Twój e-mail:</label>
+          <input
+            type="text"
+            name="mail"
+            id="mail"
+            placeholder="(wymagane)"
+            required
+          />
+          <label for="tel">Twój numer komórkowy:</label>
+          <input type="tel" name="tel" id="tel" placeholder="(opcjonalne)" />
+          <label for="content">Treść wiadomości:</label>
+          <textarea
+            rows="10"
+            cols="60"
+            name="content"
+            placeholder="(wymagane)"
+          ></textarea>
+          <input type="submit" value="Wyślij" id="submit" />
+        </form>
+      </div>
     </section>
 
     <script>

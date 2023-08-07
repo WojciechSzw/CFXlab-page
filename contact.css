@@ -24,6 +24,10 @@ section {
   flex-direction: row;
 }
 
+.contact-item > hr {
+  width: 90%;
+}
+
 table {
   margin: 0 5% 5% 5%;
   width: 90%;
@@ -49,13 +53,26 @@ table td:nth-child(even) {
   color: var(--main-color-first);
   width: 90%;
   margin: 5%;
+  font-size: 30px;
+  font-weight: 100;
+}
+
+.contact-writeMail > h3 {
+  color: var(--main-color-first);
+  width: 95%;
+  margin: 2.5%;
+  font-size: 30px;
+  font-weight: 100;
 }
 
 .contact-granditem > a {
   color: var(--side-color-second);
-  margin: 0 5% 5%;
+  margin: 0 5% 2%;
 }
 
+#netel > a {
+  margin-bottom: 100px;
+}
 #mail > a {
   margin-bottom: 5.6%;
 }
@@ -83,4 +100,40 @@ iframe {
 }
 
 .contact-writeMail {
+  width: 100%;
+}
+.contact-writeMail > form {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  margin: 0 2.5% 5% 2.5%;
+}
+
+.contact-writeMail > hr {
+  margin: 2.5% 2.5% 2.5% 2.5%;
+  width: 95%;
+}
+
+.contact-writeMail > form > label {
+  color: white;
+  margin: 5px 0;
+}
+
+.contact-writeMail > form > input,
+.contact-writeMail > form > textarea {
+  font-size: 18px;
+  border-radius: 10px;
+  min-height: 50px;
+  padding: 0.5% 1.5% 0.5% 1.5%;
+}
+
+.contact-writeMail > form > input:not(:nth-last-child(2)) {
+  width: 100%;
+  max-width: 570px;
+}
+
+#submit {
+  width: 100%;
+  max-width: 300px;
+  margin: 2% auto 1% auto;
 }
