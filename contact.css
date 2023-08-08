@@ -1,10 +1,10 @@
 :root {
-  --main-color-first: #c41bfc;
+  --main-color-first: white;
   --main-color-second: #53fc1b;
   --side-color-first: rgb(32, 40, 43);
   --side-color-second: #a3d9f9;
 }
-
+/* #c41bfc */
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +26,12 @@ section {
 
 .contact-item > hr {
   width: 90%;
+}
+
+.disapearingHR {
+  display: none;
+  visibility: hidden;
+  margin: 5% 0 0 0;
 }
 
 table {
@@ -136,4 +142,11 @@ iframe {
   width: 100%;
   max-width: 300px;
   margin: 2% auto 1% auto;
+}
+
+@media only screen and (max-width: 1333px) {
+  .disapearingHR {
+    display: inline;
+    visibility: visible;
+  }
 }

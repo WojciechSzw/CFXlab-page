@@ -1,9 +1,10 @@
 :root {
-  --main-color-first: #c41bfc;
+  --main-color-first: white;
   --main-color-second: #53fc1b;
   --side-color-first: rgb(32, 40, 43);
   --side-color-second: #a3d9f9;
 }
+/* #c41bfc */
 
 * {
   margin: 0;
@@ -64,7 +65,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   height: 110px;
-  box-shadow: 0px -10px 40px var(--main-color-second);
+  box-shadow: 0px -20px 40px var(--main-color-second);
   z-index: 10;
 }
 
@@ -143,6 +144,7 @@ body {
 }
 
 .page-title {
+  font-weight: 200;
   color: var(--main-color-first);
   margin: 200px auto 50px;
   text-align: center;
@@ -151,9 +153,10 @@ body {
 }
 
 .page-undertitle {
+  font-weight: 100;
   width: 90%;
   max-width: 1100px;
-  color: var(--main-color-first);
+  color: white;
   margin: 0px auto 30px;
   text-align: left;
   font-size: 30px;
@@ -190,7 +193,7 @@ body {
   padding-left: 10px;
 }
 
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 980px) {
   .topbar-flex {
     height: 80px;
   }
@@ -223,7 +226,7 @@ body {
 
     background-color: var(--side-color-first);
     border-top: 1px solid var(--main-color-second);
-    box-shadow: 10px 0px 40px var(--main-color-second);
+    box-shadow: 20px 40px 40px var(--main-color-second);
     z-index: 2;
 
     background: rgba(20, 20, 20, 0.904);
@@ -278,7 +281,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1100px) {
+@media only screen and (min-width: 980px) {
   .nav-list {
     visibility: visible;
     display: flex;

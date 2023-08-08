@@ -1,16 +1,19 @@
 :root {
-  --main-color-first: white;
+  --main-color-first: whitesmoke;
   --main-color-second: #53fc1b;
   --side-color-first: rgb(32, 40, 43);
   --side-color-second: #a3d9f9;
 }
-/* #a3d9f9 */
+/* #c41bfc */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: monospace, "Times New Roman", Times, serif;
 }
+
+/* TEAM SECTION */
 
 .team-section {
   display: flex;
@@ -22,14 +25,15 @@
   overflow: hidden;
   margin: 0 auto 50px auto;
   flex-direction: row;
+  position: relative;
 }
 
 .team-item {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
+  /* justify-content: center;
+  align-items: center; */
+  position: relative;
   margin: 1%;
 
   width: 48%;
@@ -45,20 +49,106 @@
 }
 
 .team-item > h2 {
-  color: var(--main-color-first);
+  color: var(--main-color-second);
   font: 30px;
   margin-bottom: 5%;
+  text-align: center;
+  margin: 5px;
 }
 
 .team-item > h3 {
-  color: var(--main-color-second);
+  color: var(--main-color-first);
   font: 20px;
-  margin-bottom: 5%;
+
+  text-align: center;
+  margin: 5px 5px 5%;
 }
 
 .team-item > p {
   color: var(--main-color-first);
   font: 10px;
   margin: 0% 5% 5%;
-  text-align: center;
+  text-align: left;
+  text-indent: 10px;
+}
+
+.btn-showinfo {
+  border: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 1;
+  border-radius: 10px;
+  font-size: clamp(15px, 5vw, 30px);
+  font-weight: 600;
+  color: transparent;
+}
+
+.btn-showinfo:hover {
+  background-color: rgba(0, 0, 0, 0.382);
+  color: var(--side-color-second);
+  cursor: pointer;
+}
+
+/* POPUP INFO */
+
+.popup-showinfo {
+  background: rgb(84, 84, 84);
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(10px, 90%, 700px);
+  z-index: 2;
+
+  display: flex;
+  direction: row;
+  visibility: hidden;
+  /* align-items: center; */
+}
+
+.popup-showinfo > img {
+  margin: 15px;
+  margin-left: 15px;
+  max-width: calc(50% - 30px);
+  height: 100%;
+}
+
+.popup-showinfo > div {
+  margin: 15px;
+  flex-direction: column;
+
+  align-content: space-between;
+}
+
+.popup-showinfo > div > p {
+  width: 100%;
+  height: calc(70%);
+  font-weight: 100;
+  color: whitesmoke;
+  font-size: clamp(12px, 2.5vw, 20px);
+}
+.popup-showinfo > div > button {
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  color: #53fc1b;
+  font-size: clamp(12px, 2.5vw, 20px);
+  font-weight: 600;
+
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+}
+
+.popup-showinfo > div > button:hover {
+  background: rgba(145, 145, 145, 0.179);
+  cursor: pointer;
+}
+.popup-showinfo > div > button:active {
+  background: rgba(145, 145, 145, 0.482);
 }

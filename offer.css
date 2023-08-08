@@ -1,3 +1,7 @@
-.classs {
-  color: red;
+:root {
+  --main-color-first: white;
+  --main-color-second: #53fc1b;
+  --side-color-first: rgb(32, 40, 43);
+  --side-color-second: #a3d9f9;
 }
+/* #c41bfc */
