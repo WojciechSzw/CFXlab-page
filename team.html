@@ -17,7 +17,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body class="background-fade">
+  <body class="background-fade" id="body">
     <nav class="topbar-flex nav-fade">
       <a href="index.html">
         <header class="logo-grid">
@@ -45,7 +45,11 @@
     </h2>
     <section class="team-section">
       <figure class="team-item">
-        <button class="btn-showinfo" onclick="showinfo('AnnaKarbowiak-info')">
+        <button
+          class="btn-showinfo"
+          id="AnnaKarbowiak-btn"
+          onclick="showinfo('AnnaKarbowiak-info')"
+        >
           Więcej informacji
         </button>
         <img src="images/team/Anna_Karbowiak.jpg" alt="phototeam" />
@@ -53,7 +57,11 @@
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
-        <button class="btn-showinfo" onclick="showinfo('Ciocia-info')">
+        <button
+          class="btn-showinfo"
+          id="Ciocia-btn"
+          onclick="showinfo('Ciocia-info')"
+        >
           Więcej informacji
         </button>
         <img src="images/team/Ciocia.jpg" alt="phototeam" />
@@ -63,36 +71,43 @@
       <figure class="team-item">
         <button
           class="btn-showinfo"
+          id="MaciejSzymankiewicz-btn"
           onclick="showinfo('MaciejSzymankiewicz-info')"
         >
           Więcej informacji
         </button>
-        <img src="images/team/Maciej Szymankiewicz.jpg" alt="phototeam" />
+        <img src="images/team/Maciej_Szymankiewicz.jpg" alt="phototeam" />
         <h2>Maciej Szymankiewicz</h2>
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
         <button
           class="btn-showinfo"
+          id="MagdalenaZimecka-btn"
           onclick="showinfo('MagdalenaZimecka-info')"
         >
           Więcej informacji
         </button>
-        <img src="images/team/Magdalena Zimecka.jpg" alt="phototeam" />
+        <img src="images/team/Magdalena_Zimecka.jpg" alt="phototeam" />
         <h2>Magdalena Zimecka</h2>
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
-        <button class="btn-showinfo" onclick="showinfo('MariaKlamka-info')">
+        <button
+          class="btn-showinfo"
+          id="MariaKlamka-btn"
+          onclick="showinfo('MariaKlamka-info')"
+        >
           Więcej informacji
         </button>
-        <img src="images/team/Maria Klamka.jpg" alt="phototeam" />
+        <img src="images/team/Maria_Klamka.jpg" alt="phototeam" />
         <h2>Maria Klamka</h2>
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
         <button
           class="btn-showinfo"
+          id="NataliaBartkowiak-btn"
           onclick="showinfo('NataliaBartkowiak-info')"
         >
           Więcej informacji
@@ -102,15 +117,23 @@
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
-        <button class="btn-showinfo" onclick="showinfo('SandraDrukała-info')">
+        <button
+          class="btn-showinfo"
+          id="SandraDrukała-btn"
+          onclick="showinfo('SandraDrukała-info')"
+        >
           Więcej informacji
         </button>
-        <img src="images/team/Sandra Drukała.jpg" alt="phototeam" />
+        <img src="images/team/Sandra_Drukała.jpg" alt="phototeam" />
         <h2>Sandra Drukała</h2>
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
-        <button class="btn-showinfo" onclick="showinfo('WiktoriaBaumann-info')">
+        <button
+          class="btn-showinfo"
+          id="WiktoriaBaumann-btn"
+          onclick="showinfo('WiktoriaBaumann-info')"
+        >
           Więcej informacji
         </button>
         <img src="images/team/AAAAA.jpg" alt="phototeam" />
@@ -118,10 +141,14 @@
         <h3>Stanowisko</h3>
       </figure>
       <figure class="team-item">
-        <button class="btn-showinfo" onclick="showinfo('HubertKarbowiak-info')">
+        <button
+          class="btn-showinfo"
+          id="HubertKarbowiak-btn"
+          onclick="showinfo('HubertKarbowiak-info')"
+        >
           Więcej informacji
         </button>
-        <img src="images/team/AAAAA.jpg" alt="phototeam" />
+        <img src="images/team/Hubert_karbowiak.jpg" alt="phototeam" />
         <h2>Hubert Karbowiak</h2>
         <h3>Stanowisko</h3>
       </figure>
@@ -318,16 +345,46 @@
           }
         });
 
-      const showinfo = (id) => {
+      const showinfo = (popupID) => {
         hideinfo();
-        const infobox = document.getElementById(id);
-        infobox.style.visibility = "visible";
+
+        const popupbox = document.getElementById(popupID);
+        const popupBtn = document.getElementById(
+          popupID.replace("info", "btn")
+        );
+
+        const TeamMemberY =
+          popupBtn.getBoundingClientRect().top +
+          window.scrollY +
+          popupBtn.offsetHeight / 2;
+
+        const TeamMemberX =
+          popupBtn.getBoundingClientRect().left + window.scrollX;
+
+        const middleOfClient = document.documentElement.clientWidth / 2;
+
+        popupbox.style.top = TeamMemberY + "px";
+
+        if (
+          TeamMemberX < middleOfClient &&
+          TeamMemberX > middleOfClient - popupBtn.offsetWidth
+        ) {
+          popupbox.style.left = middleOfClient + "px";
+        } else if (TeamMemberX < middleOfClient) {
+          popupbox.style.left = TeamMemberX + popupBtn.offsetWidth + "px";
+        } else {
+          popupbox.style.left = TeamMemberX + "px";
+        }
+
+        popupbox.style.visibility = "visible";
+        popupbox.style.display = "flex";
       };
       const hideinfo = () => {
         const infoboxClose = document.getElementsByClassName("popup-showinfo");
         for (let x = 0; x < infoboxClose.length; x++) {
           const closingNow = infoboxClose[x];
           closingNow.style.visibility = "hidden";
+          closingNow.style.display = "none";
         }
       };
     </script>
