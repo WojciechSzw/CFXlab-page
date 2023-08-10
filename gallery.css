@@ -1,0 +1,36 @@
+:root {
+  --main-color-first: whitesmoke;
+  --main-color-second: #53fc1b;
+  --side-color-first: rgb(32, 40, 43);
+  --side-color-second: #a3d9f9;
+}
+/* #c41bfc */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: monospace, "Times New Roman", Times, serif;
+}
+
+/* GALLERY SECTION */
+
+.gallery-section {
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: 0 auto 100px auto;
+  flex-direction: row;
+  position: relative;
+}
+
+.main-flexjpg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
