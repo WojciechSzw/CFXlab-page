@@ -18,19 +18,144 @@
 .gallery-section {
   display: flex;
   width: 90vw;
-  max-width: 1200px;
+  max-width: 1600px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   overflow: hidden;
   margin: 0 auto 100px auto;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
 }
+
+.gallery-section > h2 {
+  color: var(--main-color-second);
+  text-align: center;
+  margin: 50px;
+  font-size: 40px;
+}
+
+.undertitle-gallery {
+  width: clamp(0px, 90vw, 400px);
+  margin: -10px auto 50px;
+}
+
+/* MAIN container flex  */
 
 .main-flexjpg {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  width: 1195px;
+  gap: 20px;
+}
+.main-flexjpg > img {
+  width: 90vw;
+  max-width: 385px;
+  height: 100%;
+}
+@media (max-width: 1327px) {
+  .main-flexjpg {
+    width: 790px;
+  }
+}
+@media (max-width: 877px) {
+  .main-flexjpg {
+    width: 385px;
+  }
+}
+
+/* CHAPTER container flex */
+
+.chapter-flexjpg {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  height: fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  width: 1600px;
+  gap: 20px;
+}
+.chapter-flexjpg > img {
+  width: 90%;
+  max-width: 385px;
+  height: 100%;
+}
+@media (max-width: 1778px) {
+  .chapter-flexjpg {
+    width: 1195px;
+  }
+}
+@media (max-width: 1327px) {
+  .chapter-flexjpg {
+    width: 790px;
+  }
+}
+@media (max-width: 877px) {
+  .chapter-flexjpg {
+    width: 385px;
+  }
+}
+
+/* JPG slides */
+
+img:hover :not(.popup-singleimg > img) {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.popup-singleimg {
+  position: fixed;
+  top: 110px;
+  width: 100%;
+  height: calc(100vh - 110px);
+  background: rgba(0, 0, 0, 0.608);
+
+  visibility: hidden;
+  display: none;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-singleimg > img {
+  margin: 5%;
+  max-height: 90%;
+  max-width: 90%;
+  height: auto;
+  width: auto;
+}
+
+@media only screen and (max-width: 980px) {
+  .popup-singleimg {
+    top: 80px;
+    height: calc(100vh - 80px);
+  }
+}
+
+.popup-singleimg > button {
+  background: none;
+  border: none;
+  position: fixed;
+  top: 150px;
+  right: 40px;
+  transform: translate(50%, -50%);
+}
+
+@media only screen and (max-width: 980px) {
+  .popup-singleimg > button {
+    top: 120px;
+  }
+}
+
+.popup-singleimg > button:hover {
+  cursor: pointer;
 }
