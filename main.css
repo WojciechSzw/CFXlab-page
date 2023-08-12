@@ -71,8 +71,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   height: 110px;
-
-  z-index: 10;
+  z-index: 5;
 }
 
 .logo-grid {

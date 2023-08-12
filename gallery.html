@@ -178,12 +178,28 @@
       <h2>E-Lab</h2>
       <hr class="undertitle-gallery" />
       <div class="chapter-flexjpg">
-        <img
-          src="images/gallery/main/Main1Low.jpg"
-          alt="mainphoto"
+        <div
+          class="photos-stack"
+          onclick="showStack(this)"
           height="400"
           width="600"
-        />
+        >
+          <img
+            class="stacked1"
+            src="images/gallery/E-Lab/eLAB_1.1Low.jpg"
+            alt="photo-stack"
+          />
+          <img
+            class="stacked2"
+            src="images/gallery/E-Lab/eLAB_1.2Low.jpg"
+            alt="photo-stack"
+          />
+          <img
+            class="stacked3"
+            src="images/gallery/E-Lab/eLAB_1.3Low.jpg"
+            alt="photo-stack"
+          />
+        </div>
         <img
           src="images/gallery/main/Main1Low.jpg"
           alt="mainphoto"
@@ -212,10 +228,39 @@
       </div>
     </section>
 
-    <div class="popup-singleimg" id="popup-singleimg">
-      <img id="popupjpg" alt="FullResImg" />
+    <div class="popup-singleimg" id="popup-singleimg" onclick="hidephoto()">
+      <img id="popupjpg" alt="FullResImg" onclick="event.stopPropagation()" />
       <button onclick="hidephoto()">
-        <i class="fa-solid fa-xmark fa-4x" style="color: white"></i>
+        <i class="fa-solid fa-xmark fa-4x" style="color: #53fc1b"></i>
+      </button>
+    </div>
+
+    <div class="popup-stackimg" id="popup-stackimg" onclick="hideStack()">
+      <img
+        id="popupjpgFromStack"
+        alt="FullResImg"
+        onclick="event.stopImmediatePropagation()"
+      />
+      <div class="navigation_Stack" id="navigation_Stack">
+        <img
+          onclick="changeFullResImg(this.src); event.stopPropagation()"
+          alt="navigationstackphoto"
+        />
+        <img
+          onclick="changeFullResImg(this.src); event.stopPropagation()"
+          alt="navigationstackphoto"
+        />
+        <img
+          onclick="changeFullResImg(this.src); event.stopPropagation()"
+          alt="navigationstackphoto"
+        />
+        <img
+          onclick="changeFullResImg(this.src); event.stopPropagation()"
+          alt="navigationstackphoto"
+        />
+      </div>
+      <button onclick="hideStack()">
+        <i class="fa-solid fa-xmark fa-4x" style="color: #53fc1b"></i>
       </button>
     </div>
 
@@ -232,6 +277,41 @@
 
       function hidephoto() {
         const box = document.getElementById("popup-singleimg");
+        box.style.visibility = "hidden";
+        box.style.display = "none";
+      }
+
+      function showStack(thumbnailStack) {
+        const popupStack = document.getElementById("popup-stackimg");
+        const navigationStack = document.getElementById("navigation_Stack");
+
+        popupStack.style.visibility = "visible";
+        popupStack.style.display = "flex";
+        popupStack.children[0].src = thumbnailStack.children[0].src.replace(
+          "Low",
+          "Full"
+        );
+        let j = thumbnailStack.childElementCount - 1;
+        for (let i = 0; i < thumbnailStack.childElementCount; i++) {
+          const child = navigationStack.children[i];
+          child.src = thumbnailStack.children[j].src;
+          child.style.visibility = "visible";
+          child.style.display = "block";
+          child.style.maxWidth =
+            "calc(" + 100 / thumbnailStack.childElementCount + "%" + " - 5px)";
+          j--;
+        }
+      }
+
+      function changeFullResImg(navImgSrc) {
+        document.getElementById("popupjpgFromStack").src = navImgSrc.replace(
+          "Low",
+          "Full"
+        );
+      }
+
+      function hideStack(event) {
+        const box = document.getElementById("popup-stackimg");
         box.style.visibility = "hidden";
         box.style.display = "none";
       }
