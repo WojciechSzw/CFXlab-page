@@ -133,7 +133,7 @@
       <div class="contact-writeMail">
         <hr />
         <h3>Skontaktuj się z nami za pomocą formularza:</h3>
-        <form action="send_mail.php">
+        <form id="mail_form">
           <label for="imie">Imię i nazwisko:</label>
           <input type="text" name="imie" id="imie" placeholder="(opcjonalne)" />
           <label for="mail">Twój e-mail:</label>
@@ -157,13 +157,22 @@
             rows="10"
             cols="60"
             name="content"
+            id="content"
             placeholder="(wymagane)"
             required
           ></textarea>
-          <input type="submit" value="Wyślij" id="submit" />
+          <input type="submit" value="Wyślij" id="submit_btn" />
         </form>
       </div>
     </section>
+    <script src="contact.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      emailjs.init("ClsGFr6Le1gtsxTEU");
+    </script>
 
     <script>
       document

@@ -138,10 +138,10 @@ iframe {
   max-width: 570px;
 }
 
-#submit {
+#submit_btn {
   width: 100%;
   max-width: 300px;
-  margin: 2% auto 1% auto;
+  margin: 20px auto 1% auto;
 }
 
 @media only screen and (max-width: 1333px) {
