@@ -40,10 +40,12 @@
   font-size: 20px;
   font-weight: 100;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .li-divider {
-  width: 150px;
+  width: 50px;
+  box-shadow: 0px 0px 1px 1px var(--side-color-second);
   margin: 0 auto;
   background-color: var(--side-color-second);
   height: 1px;
@@ -51,7 +53,7 @@
 }
 
 .under-list {
-  margin: 10px;
+  margin: 30px;
   color: var(--main-color-first);
   width: 90%;
   font-size: 20px;
@@ -68,6 +70,7 @@
 
 .contact-anchor {
   color: var(--main-color-second);
+  padding-bottom: 5px;
 }
 
 .contact-anchor:hover {
