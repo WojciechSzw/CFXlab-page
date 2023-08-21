@@ -72,7 +72,7 @@ table td:nth-child(even) {
 }
 
 .contact-granditem > a {
-  color: var(--side-color-second);
+  color: white;
   margin: 0 5% 2%;
 }
 
@@ -105,8 +105,13 @@ iframe {
   justify-content: center;
 }
 
+.fa-brands {
+  color: white;
+}
+
 .fa-brands:hover {
   transform: scale(1.1);
+  color: #53fc1b;
 }
 
 .contact-writeMail {

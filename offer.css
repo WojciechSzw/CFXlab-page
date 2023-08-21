@@ -33,13 +33,13 @@
 }
 
 .offer-list > li {
-  margin: 10px 0;
+  margin: 25px 0px 25px 0px;
   color: var(--main-color-first);
   width: 100%;
-  font-size: 20px;
-  font-weight: 100;
+  font-size: 25px;
+  font-weight: 1;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .li-divider {
