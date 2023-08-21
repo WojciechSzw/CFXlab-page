@@ -105,6 +105,10 @@ iframe {
   justify-content: center;
 }
 
+.fa-brands:hover {
+  transform: scale(1.1);
+}
+
 .contact-writeMail {
   width: 100%;
 }

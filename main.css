@@ -275,14 +275,14 @@ body {
   .page-title {
     margin: 150px auto 30px;
     text-align: center;
-    font-size: 35px;
+    font-size: 40px;
   }
 
   .page-undertitle {
     width: 90%;
     max-width: 1100px;
     margin: 0px auto 30px;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .full-page-responsive-photo {
@@ -294,11 +294,11 @@ body {
   }
 
   .full-page-responsive-photo img {
-    position: relative;
+    transform: translateX(-55%);
   }
 
   .full-page-responsive-photo h1 {
-    font-size: 41px;
+    font-size: 30px;
   }
 }
 
