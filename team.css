@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace, "Times New Roman", Times, serif;
+  font-family: "Inconsolata", monospace;
 }
 
 /* TEAM SECTION */
@@ -136,7 +136,9 @@
   margin-bottom: clamp(12px, 5vw, 45px);
 }
 .popup-showinfo > div > p > b {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
+  padding-bottom: auto;
+  margin-bottom: auto;
 }
 
 .popup-showinfo > div > button {
