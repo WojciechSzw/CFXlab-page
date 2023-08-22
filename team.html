@@ -23,7 +23,7 @@
       rel="stylesheet"
     />
   </head>
-  <body class="background-fade" id="body">
+  <body class="background-fade" id="body" onclick="hideinfo()">
     <nav class="topbar-flex nav-fade">
       <a href="index.html">
         <header class="logo-grid">
@@ -54,7 +54,7 @@
         <button
           class="btn-showinfo"
           id="AnnaKarbowiak-btn"
-          onclick="showinfo('AnnaKarbowiak-info')"
+          onclick="showinfo('AnnaKarbowiak-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -66,7 +66,7 @@
         <button
           class="btn-showinfo"
           id="Ciocia-btn"
-          onclick="showinfo('Ciocia-info')"
+          onclick="showinfo('Ciocia-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -78,7 +78,7 @@
         <button
           class="btn-showinfo"
           id="NataliiaKovtun-btn"
-          onclick="showinfo('NataliiaKovtun-info')"
+          onclick="showinfo('NataliiaKovtun-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -90,7 +90,7 @@
         <button
           class="btn-showinfo"
           id="MaciejSzymankiewicz-btn"
-          onclick="showinfo('MaciejSzymankiewicz-info')"
+          onclick="showinfo('MaciejSzymankiewicz-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -102,7 +102,7 @@
         <button
           class="btn-showinfo"
           id="MagdalenaZimecka-btn"
-          onclick="showinfo('MagdalenaZimecka-info')"
+          onclick="showinfo('MagdalenaZimecka-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -114,7 +114,7 @@
         <button
           class="btn-showinfo"
           id="MariaKlamka-btn"
-          onclick="showinfo('MariaKlamka-info')"
+          onclick="showinfo('MariaKlamka-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -126,7 +126,7 @@
         <button
           class="btn-showinfo"
           id="NataliaBartkowiak-btn"
-          onclick="showinfo('NataliaBartkowiak-info')"
+          onclick="showinfo('NataliaBartkowiak-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -138,7 +138,7 @@
         <button
           class="btn-showinfo"
           id="SandraDrukała-btn"
-          onclick="showinfo('SandraDrukała-info')"
+          onclick="showinfo('SandraDrukała-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -150,7 +150,7 @@
         <button
           class="btn-showinfo"
           id="WiktoriaBaumann-btn"
-          onclick="showinfo('WiktoriaBaumann-info')"
+          onclick="showinfo('WiktoriaBaumann-info'); event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -162,7 +162,7 @@
         <button
           class="btn-showinfo"
           id="HubertKarbowiak-btn"
-          onclick="showinfo('HubertKarbowiak-info')"
+          onclick="showinfo('HubertKarbowiak-info') ; event.stopPropagation()"
         >
           Więcej informacji
         </button>
@@ -172,11 +172,12 @@
       </figure>
     </section>
     <div
-      class="popup-showinfo popup-showinfo-Horizontal"
+      class="popup-showinfo"
       id="AnnaKarbowiak-info"
+      onclick="event.stopPropagation()"
     >
       <img
-        src="images/team/popup/Anna_Karbowiak_popup.jpg"
+        src="images/team/popup/AAAAAAAA.jpg"
         alt="fotopopup"
         height="1200"
         width="800"
@@ -194,7 +195,11 @@
         <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
-    <div class="popup-showinfo" id="Ciocia-info">
+    <div
+      class="popup-showinfo"
+      id="Ciocia-info"
+      onclick="event.stopPropagation()"
+    >
       <img
         src="images/team/popup/AAAAAAAA.jpg"
         alt="fotopopup"
@@ -214,7 +219,11 @@
         <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
-    <div class="popup-showinfo" id="NataliiaKovtun-info">
+    <div
+      class="popup-showinfo"
+      id="NataliiaKovtun-info"
+      onclick="event.stopPropagation()"
+    >
       <img
         src="images/team/popup/AAAAAAAA.jpg"
         alt="fotopopup"
@@ -237,6 +246,7 @@
     <div
       class="popup-showinfo popup-showinfo-Horizontal"
       id="MaciejSzymankiewicz-info"
+      onclick="event.stopPropagation()"
     >
       <img
         src="images/team/popup/Maciej_Szymankiewicz_popup.jpg"
@@ -257,9 +267,13 @@
         <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
-    <div class="popup-showinfo" id="MagdalenaZimecka-info">
+    <div
+      class="popup-showinfo popup-showinfo-Horizontal"
+      id="MagdalenaZimecka-info"
+      onclick="event.stopPropagation()"
+    >
       <img
-        src="images/team/popup/AAAAAAAA.jpg"
+        src="images/team/popup/Anna_Karbowiak_popup.jpg"
         alt="fotopopup"
         height="1200"
         width="800"
@@ -277,7 +291,11 @@
         <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
-    <div class="popup-showinfo" id="MariaKlamka-info">
+    <div
+      class="popup-showinfo"
+      id="MariaKlamka-info"
+      onclick="event.stopPropagation()"
+    >
       <img
         src="images/team/popup/AAAAAAAA.jpg"
         alt="fotopopup"
@@ -300,6 +318,7 @@
     <div
       class="popup-showinfo popup-showinfo-Horizontal"
       id="NataliaBartkowiak-info"
+      onclick="event.stopPropagation()"
     >
       <img
         src="images/team/popup/Natalia_Bartkowiak_popup.jpg"
@@ -323,6 +342,7 @@
     <div
       class="popup-showinfo popup-showinfo-Horizontal"
       id="SandraDrukała-info"
+      onclick="event.stopPropagation()"
     >
       <img
         src="images/team/popup/Sandra_Drukała_popup.jpg"
@@ -343,7 +363,11 @@
         <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
-    <div class="popup-showinfo" id="WiktoriaBaumann-info">
+    <div
+      class="popup-showinfo"
+      id="WiktoriaBaumann-info"
+      onclick="event.stopPropagation()"
+    >
       <img
         src="images/team/popup/AAAAAAAA.jpg"
         alt="fotopopup"
@@ -363,33 +387,32 @@
         <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
-    <div class="fullpage-for-popup" onclick="hideinfo()">
-      <div
-        onclick="event.stopPropagation()"
-        class="popup-showinfo popup-showinfo-Horizontal"
-        id="HubertKarbowiak-info"
-      >
-        <img
-          src="images/team/popup/Hubert_Karbowiak_popup.jpg"
-          alt="fotopopup"
-          height="1200"
-          width="800"
-        />
-        <div>
-          <p>
-            HUBERT KARBOWIAK
-            <br />
-            Jest technikiem dentystycznym od 17 lat, a od ostatnich 12 zgłębia
-            tajniki pracy z ceramiką. Od 2007 prowadzi swoją pracownię gdzie
-            zatrudnia wielu specjalistów w swoich dziedzinach. W 2017 został
-            oficjalnym międzynarodowym trenerem z ramienia Vity, a 4 lata
-            później, w 2021 dołączył do instruktorów eLAB<b>®</b>. Przede
-            wszystkim jednak jest szczęśliwym mężem i ojcem trójki dzieci.
-          </p>
-          <button onclick="hideinfo()">Zamknij</button>
-        </div>
+    <div
+      onclick="event.stopPropagation()"
+      class="popup-showinfo popup-showinfo-Horizontal"
+      id="HubertKarbowiak-info"
+    >
+      <img
+        src="images/team/popup/Hubert_Karbowiak_popup.jpg"
+        alt="fotopopup"
+        height="1200"
+        width="800"
+      />
+      <div>
+        <p>
+          HUBERT KARBOWIAK
+          <br />
+          Jest technikiem dentystycznym od 17 lat, a od ostatnich 12 zgłębia
+          tajniki pracy z ceramiką. Od 2007 prowadzi swoją pracownię gdzie
+          zatrudnia wielu specjalistów w swoich dziedzinach. W 2017 został
+          oficjalnym międzynarodowym trenerem z ramienia Vity, a 4 lata później,
+          w 2021 dołączył do instruktorów eLAB<b>®</b>. Przede wszystkim jednak
+          jest szczęśliwym mężem i ojcem trójki dzieci.
+        </p>
+        <button onclick="hideinfo()">Zamknij</button>
       </div>
     </div>
+
     <script>
       document
         .getElementById("menu-button")
@@ -401,10 +424,9 @@
             container.style.visibility = "hidden";
           }
         });
-
+      let x = 0;
       const showinfo = (popupID) => {
         hideinfo();
-
         const popupbox = document.getElementById(popupID);
         const popupBtn = document.getElementById(
           popupID.replace("info", "btn")
@@ -435,14 +457,19 @@
 
         popupbox.style.visibility = "visible";
         popupbox.style.display = "flex";
+        x = 1;
       };
       const hideinfo = () => {
-        const infoboxClose = document.getElementsByClassName("popup-showinfo");
-        for (let x = 0; x < infoboxClose.length; x++) {
-          const closingNow = infoboxClose[x];
-          closingNow.style.visibility = "hidden";
-          closingNow.style.display = "none";
+        if (x === 1) {
+          const infoboxClose =
+            document.getElementsByClassName("popup-showinfo");
+          for (let x = 0; x < infoboxClose.length; x++) {
+            const closingNow = infoboxClose[x];
+            closingNow.style.visibility = "hidden";
+            closingNow.style.display = "none";
+          }
         }
+        x = 0;
       };
       document.addEventListener("keydown", (evt) => {
         if (evt.key === "Escape") {
