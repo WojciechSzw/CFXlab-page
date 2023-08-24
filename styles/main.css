@@ -211,7 +211,7 @@ body {
 
 @media only screen and (max-width: 980px) {
   .topbar-flex {
-    height: 80px;
+    height: 70px;
   }
   .logo-grid {
     grid-template-areas: "img h1";
@@ -231,9 +231,9 @@ body {
 
   .nav-list {
     width: 140px;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 70px);
     position: absolute;
-    top: 80px;
+    top: 70px;
     right: 0px;
 
     display: flex;
@@ -266,7 +266,7 @@ body {
     position: absolute;
     width: 50px;
     height: 50px;
-    top: 30px;
+    top: 25px;
     right: 15px;
     display: block;
     visibility: visible;

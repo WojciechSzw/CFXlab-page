@@ -105,7 +105,6 @@
   display: flex;
   flex-direction: row;
   visibility: hidden;
-  z-index: 7;
 }
 
 .popup-showinfo > img {
@@ -124,11 +123,12 @@
 
 .popup-showinfo > div > p {
   width: 100%;
-  height: calc(70%);
   font-weight: 100;
   color: whitesmoke;
   font-size: clamp(12px, 2.5vw, 20px);
   margin-bottom: clamp(12px, 5vw, 45px);
+  display: flex;
+  flex-direction: column;
 }
 .popup-showinfo > div > p > b {
   /* font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif; */
@@ -137,7 +137,6 @@
 }
 
 .popup-showinfo > div > button {
-  text-align: right;
   padding: 10px;
   border-radius: 10px;
   border: none;
@@ -147,8 +146,8 @@
   font-weight: 600;
 
   position: absolute;
-  right: 15px;
-  bottom: 15px;
+  right: clamp(5px, 1vw, 15px);
+  bottom: clamp(5px, 1vw, 15px);
 }
 
 .popup-showinfo > div > button:hover {
