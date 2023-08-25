@@ -129,6 +129,13 @@
           width="600"
           onclick="showPhoto(this.src)"
         />
+        <img
+          src="images/gallery/cyrkon/cyrkon_5Low.jpg"
+          alt="mainphoto"
+          height="400"
+          width="600"
+          onclick="showPhoto(this.src)"
+        />
       </div>
       <h2>Prace na metalu</h2>
       <hr class="undertitle-gallery" />
@@ -387,6 +394,7 @@
         id="popupjpgFromStack"
         alt="FullResImg"
         onclick="event.stopImmediatePropagation()"
+        height="5000px"
       />
       <div class="navigation_Stack" id="navigation_Stack">
         <img
@@ -437,6 +445,7 @@
         const box = document.getElementById("popup-singleimg");
         box.style.visibility = "hidden";
         box.style.display = "none";
+        document.getElementById("popupjpg").src = "";
       }
 
       function showStack(thumbnailStack) {
@@ -479,6 +488,8 @@
           child.style.visibility = "hidden";
           child.style.display = "none";
         }
+
+        document.getElementById("popup-stackimg").children[0].src = "";
       }
     </script>
   </body>

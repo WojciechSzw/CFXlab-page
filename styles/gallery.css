@@ -196,7 +196,7 @@
   /* height: 90%; */
   position: absolute;
   transform-origin: bottom left;
-  border: 1px solid black;
+  border: 1px solid rgba(78, 78, 78, 0.642);
 }
 
 .stacked1 {
