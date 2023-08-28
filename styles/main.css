@@ -229,23 +229,28 @@ body {
     visibility: hidden;
   }
 
+  .blackout-body-navlist {
+    position: absolute;
+    top: 70px;
+    left: 0px;
+    width: calc(100% - 140px);
+    background: rgba(0, 0, 0, 0.748);
+    height: calc(100vh - 70px);
+  }
+
   .nav-list {
     width: 140px;
     height: calc(100vh - 70px);
     position: absolute;
     top: 70px;
     right: 0px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
-    background-color: var(--side-color-first);
     border-top: 1px solid var(--main-color-second);
     box-shadow: 20px 40px 40px var(--main-color-second);
     z-index: 2;
-
-    background: rgba(20, 20, 20, 0.904);
+    background: rgb(28, 27, 27);
   }
 
   .nav-transparent > ul {
@@ -253,11 +258,19 @@ body {
     box-shadow: none;
   }
 
+  .nav-transparent > div {
+    background: rgba(28, 27, 27, 0.285);
+  }
+
   .nav-list > li > a {
     margin-bottom: 2px;
   }
 
   #nav-list {
+    visibility: hidden;
+  }
+
+  #blackout-body-navlist {
     visibility: hidden;
   }
 

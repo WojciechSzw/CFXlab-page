@@ -277,3 +277,16 @@
   transform: scale(1.05);
   cursor: pointer;
 }
+
+/* SCROLLING THROUGH PHOTOS */
+
+.right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  color: #53fc1b;
+}
+
+.right-arrow:hover {
+  cursor: pointer;
+}

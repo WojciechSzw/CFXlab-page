@@ -32,6 +32,7 @@
           <h2 class="logo-h2">Pracownia technik dentystycznych</h2>
         </header>
       </a>
+      <div class="blackout-body-navlist" id="blackout-body-navlist"></div>
       <ul class="nav-list" id="nav-list">
         <li><a class="nav-chosen" href="offer.html">Oferta</a></li>
         <li><a href="gallery.html">Galeria</a></li>
@@ -94,17 +95,6 @@
         <a class="contact-anchor" href="contact.html">kontakt</a>.
       </p>
     </section>
-    <script>
-      document
-        .getElementById("menu-button")
-        .addEventListener("click", function () {
-          var container = document.getElementById("nav-list");
-          if (container.style.visibility === "hidden") {
-            container.style.visibility = "visible";
-          } else {
-            container.style.visibility = "hidden";
-          }
-        });
-    </script>
+    <script src="/JS/navbar.js"></script>
   </body>
 </html>
