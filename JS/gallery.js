@@ -169,6 +169,7 @@ const slideShow = {
         document.getElementById("leftArrow").style.visibility = "visible";
       }
     } else if (slideShow.scrolling[index][0] === "popup-stackimg") {
+      hideStack();
       hidephoto();
       showStack(
         document.getElementsByClassName("photos-stack")[
