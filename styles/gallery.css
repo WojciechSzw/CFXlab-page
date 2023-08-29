@@ -162,6 +162,14 @@
   cursor: pointer;
 }
 
+.fa-xmark {
+  text-shadow: 0px 0px 30px var(--main-color-second);
+}
+
+.fa-xmark:hover {
+  transform: scale(1.2);
+}
+
 /* MULTIPLE PHOTOS THUMBNAIL*/
 
 .photos-stack {
@@ -286,10 +294,12 @@
   right: 20px;
   color: #53fc1b;
   z-index: 100;
+  text-shadow: 0px 0px 30px var(--main-color-second);
 }
 
 .right-arrow:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .left-arrow {
@@ -298,8 +308,10 @@
   left: 20px;
   color: #53fc1b;
   z-index: 100;
+  text-shadow: 0px 0px 30px var(--main-color-second);
 }
 
 .left-arrow:hover {
   cursor: pointer;
+  transform: scale(1.2);
 }
