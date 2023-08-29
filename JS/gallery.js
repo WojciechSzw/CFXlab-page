@@ -6,6 +6,14 @@ function showPhoto(srcLOW) {
   const box = document.getElementById("popup-singleimg");
   box.style.visibility = "visible";
   box.style.display = "flex";
+  if (
+    srcLOW.slice(srcLOW.indexOf("images")) ===
+    "images/gallery/main/gallery_1Low.jpg"
+  ) {
+    document.getElementById("leftArrow").style.visibility = "hidden";
+  } else {
+    document.getElementById("leftArrow").style.visibility = "visible";
+  }
 }
 
 function hidephoto() {
@@ -34,6 +42,11 @@ function showStack(thumbnailStack) {
     child.style.maxWidth =
       "calc(" + 100 / thumbnailStack.childElementCount + "%" + " - 5px)";
     j--;
+  }
+  if (thumbnailStack === document.getElementsByClassName("photos-stack")[7]) {
+    document.getElementById("rightDoubleArrow").style.visibility = "hidden";
+  } else {
+    document.getElementById("rightDoubleArrow").style.visibility = "visible";
   }
 }
 
@@ -107,7 +120,6 @@ const slideShow = {
         document.getElementById("navigation_Stack").children[0];
       const indexFNavImgName = firstNavigationImg.src.indexOf("images");
       const FNavImgName = firstNavigationImg.src.slice(indexFNavImgName);
-      console.log(FNavImgName);
       for (let x = 13; x < slideShow.scrolling.length; x++) {
         if (slideShow.scrolling[x][1] === FNavImgName) {
           slideShow.openImg(x - 1);
@@ -132,7 +144,6 @@ const slideShow = {
         document.getElementById("navigation_Stack").children[0];
       const indexFNavImgName = firstNavigationImg.src.indexOf("images");
       const FNavImgName = firstNavigationImg.src.slice(indexFNavImgName);
-      console.log(FNavImgName);
       for (let x = 13; x < slideShow.scrolling.length; x++) {
         if (slideShow.scrolling[x][1] === FNavImgName) {
           slideShow.openImg(x + 1);
@@ -142,6 +153,7 @@ const slideShow = {
   },
 
   openImg(index) {
+    if (index === -1 || index === slideShow.scrolling.length) return;
     if (slideShow.scrolling[index][0] === "popup-singleimg") {
       hideStack();
       const box = document.getElementById("popup-singleimg");
@@ -151,10 +163,11 @@ const slideShow = {
       img.src =
         img.src.slice(0, img.src.indexOf("images")) +
         slideShow.scrolling[index][1];
-      console.log(
-        img.src.slice(0, img.src.indexOf("images")) +
-          slideShow.scrolling[index][1]
-      );
+      if (index === 0) {
+        document.getElementById("leftArrow").style.visibility = "hidden";
+      } else {
+        document.getElementById("leftArrow").style.visibility = "visible";
+      }
     } else if (slideShow.scrolling[index][0] === "popup-stackimg") {
       hidephoto();
       showStack(
@@ -164,4 +177,27 @@ const slideShow = {
       );
     }
   },
+};
+
+document.onkeydown = function (event) {
+  const stack = document.getElementById("popup-stackimg");
+  const single = document.getElementById("popup-singleimg");
+  let popup = "";
+  if (stack.style.visibility === "visible") {
+    popup = "popup-stackimg";
+  } else if (single.style.visibility === "visible") {
+    popup = "popup-singleimg";
+  } else {
+    return;
+  }
+
+  switch (event.key) {
+    case "ArrowLeft":
+      slideShow.scrollLeft(document.getElementById(popup));
+      break;
+    case "ArrowRight":
+      slideShow.scrollRight(document.getElementById(popup));
+      break;
+    default:
+  }
 };
