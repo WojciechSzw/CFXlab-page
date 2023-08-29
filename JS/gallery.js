@@ -79,13 +79,13 @@ const slideShow = {
       console.log("img name: " + ImgName);
       for (let x = 0; x < scrolling.length; x++) {
         if (scrolling[x][1] === ImgName) {
-          slideShow.openNextImg(x + 1);
+          slideShow.openImg(x + 1);
         }
       }
     }
   },
 
-  openNextImg(index) {
+  openImg(index) {
     if (scrolling[index][0] === "popup-singleimg") {
       const box = document.getElementById("popup-singleimg");
       const img = box.getElementsByTagName("img")[0];
@@ -93,11 +93,11 @@ const slideShow = {
         img.src.slice(0, img.src.indexOf("images")) + scrolling[index][1];
       box.style.visibility = "visible";
       box.style.display = "flex";
-      console.log(
-        "next img: " +
-          imgSrc.slice(0, imgSrc.indexOf("images")) +
-          scrolling[index][1]
-      );
+      // console.log(
+      //   "next img: " +
+      //     imgSrc.slice(0, imgSrc.indexOf("images")) +
+      //     scrolling[index][1]
+      // );
     }
   },
 };
