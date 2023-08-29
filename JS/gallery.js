@@ -12,7 +12,7 @@ function hidephoto() {
   const box = document.getElementById("popup-singleimg");
   box.style.visibility = "hidden";
   box.style.display = "none";
-  document.getElementById("popupjpg").src = "";
+  document.getElementById("popupjpg").src = "images";
 }
 
 function showStack(thumbnailStack) {
@@ -59,26 +59,82 @@ function hideStack(event) {
   document.getElementById("popup-stackimg").children[0].src = "";
 }
 
-const scrolling = [
-  ["popup-singleimg", "images/gallery/main/gallery_1Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_2Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_3Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_4Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_5Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_6Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_7Full.jpg"],
-  ["popup-singleimg", "images/gallery/main/gallery_8Full.jpg"],
-];
-
 const slideShow = {
+  scrolling: [
+    ["popup-singleimg", "images/gallery/main/gallery_1Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_2Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_3Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_4Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_5Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_6Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_7Full.jpg"],
+    ["popup-singleimg", "images/gallery/main/gallery_8Full.jpg"],
+    ["popup-singleimg", "images/gallery/cyrkon/cyrkon_1Full.jpg"],
+    ["popup-singleimg", "images/gallery/cyrkon/cyrkon_2Full.jpg"],
+    ["popup-singleimg", "images/gallery/cyrkon/cyrkon_3Full.jpg"],
+    ["popup-singleimg", "images/gallery/cyrkon/cyrkon_4Full.jpg"],
+    ["popup-singleimg", "images/gallery/cyrkon/cyrkon_5Full.jpg"],
+    ["popup-singleimg", "images/gallery/na_metalu/nametalu_1Full.jpg"],
+    ["popup-singleimg", "images/gallery/na_metalu/nametalu_2Full.jpg"],
+    ["popup-stackimg", "images/gallery/licowki/licowki_1.1Low.jpg", 0],
+    ["popup-stackimg", "images/gallery/licowki/licowki_2.1Low.jpg", 1],
+    ["popup-singleimg", "images/gallery/all_on/allon_1Full.jpg"],
+    ["popup-singleimg", "images/gallery/all_on/allon_2Full.jpg"],
+    ["popup-singleimg", "images/gallery/all_on/allon_3Full.jpg"],
+    ["popup-singleimg", "images/gallery/all_on/allon_4Full.jpg"],
+    ["popup-singleimg", "images/gallery/all_on/allon_5Full.jpg"],
+    ["popup-singleimg", "images/gallery/all_on/allon_6Full.jpg"],
+    ["popup-stackimg", "images/gallery/E-Lab/eLAB_1.1Low.jpg", 2],
+    ["popup-stackimg", "images/gallery/E-Lab/eLAB_2.1Low.jpg", 3],
+    ["popup-stackimg", "images/gallery/E-Lab/eLAB_3.1Low.jpg", 4],
+    ["popup-stackimg", "images/gallery/metamorfozy/metamorfozy_1.1Low.jpg", 5],
+    ["popup-stackimg", "images/gallery/metamorfozy/metamorfozy_2.1Low.jpg", 6],
+    ["popup-stackimg", "images/gallery/metamorfozy/metamorfozy_3.1Low.jpg", 7],
+  ],
+  scrollLeft(popup) {
+    if (popup.id === "popup-singleimg") {
+      const mainImg = popup.getElementsByTagName("img")[0];
+      const indexImgName = mainImg.src.indexOf("images");
+      const ImgName = mainImg.src.slice(indexImgName);
+
+      for (let x = 0; x < slideShow.scrolling.length; x++) {
+        if (slideShow.scrolling[x][1] === ImgName) {
+          slideShow.openImg(x - 1);
+        }
+      }
+    } else if (popup.id === "popup-stackimg") {
+      const firstNavigationImg =
+        document.getElementById("navigation_Stack").children[0];
+      const indexFNavImgName = firstNavigationImg.src.indexOf("images");
+      const FNavImgName = firstNavigationImg.src.slice(indexFNavImgName);
+      console.log(FNavImgName);
+      for (let x = 13; x < slideShow.scrolling.length; x++) {
+        if (slideShow.scrolling[x][1] === FNavImgName) {
+          slideShow.openImg(x - 1);
+        }
+      }
+    }
+  },
+
   scrollRight(popup) {
     if (popup.id === "popup-singleimg") {
       const mainImg = popup.getElementsByTagName("img")[0];
       const indexImgName = mainImg.src.indexOf("images");
       const ImgName = mainImg.src.slice(indexImgName);
-      console.log("img name: " + ImgName);
-      for (let x = 0; x < scrolling.length; x++) {
-        if (scrolling[x][1] === ImgName) {
+
+      for (let x = 0; x < slideShow.scrolling.length; x++) {
+        if (slideShow.scrolling[x][1] === ImgName) {
+          slideShow.openImg(x + 1);
+        }
+      }
+    } else if (popup.id === "popup-stackimg") {
+      const firstNavigationImg =
+        document.getElementById("navigation_Stack").children[0];
+      const indexFNavImgName = firstNavigationImg.src.indexOf("images");
+      const FNavImgName = firstNavigationImg.src.slice(indexFNavImgName);
+      console.log(FNavImgName);
+      for (let x = 13; x < slideShow.scrolling.length; x++) {
+        if (slideShow.scrolling[x][1] === FNavImgName) {
           slideShow.openImg(x + 1);
         }
       }
@@ -86,18 +142,26 @@ const slideShow = {
   },
 
   openImg(index) {
-    if (scrolling[index][0] === "popup-singleimg") {
+    if (slideShow.scrolling[index][0] === "popup-singleimg") {
+      hideStack();
       const box = document.getElementById("popup-singleimg");
       const img = box.getElementsByTagName("img")[0];
-      img.src =
-        img.src.slice(0, img.src.indexOf("images")) + scrolling[index][1];
       box.style.visibility = "visible";
       box.style.display = "flex";
-      // console.log(
-      //   "next img: " +
-      //     imgSrc.slice(0, imgSrc.indexOf("images")) +
-      //     scrolling[index][1]
-      // );
+      img.src =
+        img.src.slice(0, img.src.indexOf("images")) +
+        slideShow.scrolling[index][1];
+      console.log(
+        img.src.slice(0, img.src.indexOf("images")) +
+          slideShow.scrolling[index][1]
+      );
+    } else if (slideShow.scrolling[index][0] === "popup-stackimg") {
+      hidephoto();
+      showStack(
+        document.getElementsByClassName("photos-stack")[
+          slideShow.scrolling[index][2]
+        ]
+      );
     }
   },
 };

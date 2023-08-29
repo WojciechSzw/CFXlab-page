@@ -282,11 +282,24 @@
 
 .right-arrow {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 24px);
   right: 20px;
   color: #53fc1b;
+  z-index: 100;
 }
 
 .right-arrow:hover {
+  cursor: pointer;
+}
+
+.left-arrow {
+  position: absolute;
+  top: calc(50% - 24px);
+  left: 20px;
+  color: #53fc1b;
+  z-index: 100;
+}
+
+.left-arrow:hover {
   cursor: pointer;
 }
