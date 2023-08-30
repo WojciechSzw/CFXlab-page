@@ -20,7 +20,7 @@ function hidephoto() {
   const box = document.getElementById("popup-singleimg");
   box.style.visibility = "hidden";
   box.style.display = "none";
-  document.getElementById("popupjpg").src = "images";
+  document.getElementById("popupjpg").src = "images/loading.jpg";
 }
 
 function showStack(thumbnailStack) {
@@ -57,7 +57,7 @@ function changeFullResImg(navImgSrc) {
   );
 }
 
-function hideStack(event) {
+function hideStack() {
   const box = document.getElementById("popup-stackimg");
   box.style.visibility = "hidden";
   box.style.display = "none";
@@ -69,7 +69,8 @@ function hideStack(event) {
     child.style.display = "none";
   }
 
-  document.getElementById("popup-stackimg").children[0].src = "";
+  document.getElementById("popup-stackimg").children[0].src =
+    "images/loading.jpg";
 }
 
 const slideShow = {
