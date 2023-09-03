@@ -384,7 +384,12 @@
     </section>
 
     <div class="popup-singleimg" id="popup-singleimg" onclick="hidephoto()">
-      <img id="popupjpg" alt="FullResImg" onclick="event.stopPropagation()" />
+      <img
+        src="images/loading.jpg"
+        id="popupjpg"
+        alt="FullResImg"
+        onclick="event.stopPropagation()"
+      />
       <button onclick="hidephoto()">
         <i class="fa-solid fa-xmark fa-4x" style="color: #53fc1b"></i>
       </button>
@@ -403,8 +408,8 @@
       <img
         id="popupjpgFromStack"
         alt="FullResImg"
+        src="images/loading.jpg"
         onclick="event.stopImmediatePropagation()"
-        height="5000px"
       />
       <div class="navigation_Stack" id="navigation_Stack">
         <img
