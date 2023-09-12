@@ -50,15 +50,17 @@
 
 .team-item > h2 {
   color: var(--main-color-second);
-  font: 30px;
+  font-weight: 400;
   margin-bottom: 5%;
   text-align: center;
   margin: 5px;
+  font-size: 25px;
 }
 
 .team-item > h3 {
   color: var(--main-color-first);
-  font: 20px;
+  font-size: 20px;
+  font-weight: 300;
 
   text-align: center;
   margin: 5px 5px 5%;
@@ -87,7 +89,7 @@
 
 .btn-showinfo:hover {
   background-color: rgba(0, 0, 0, 0.382);
-  color: var(--side-color-second);
+  color: rgb(20, 20, 20);
   cursor: pointer;
 }
 
