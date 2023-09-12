@@ -148,7 +148,6 @@ const slideShow = {
     } else if (popup.id === "popup-stackimg") {
       const firstNavigationImg =
         document.getElementById("navigation_Stack").children[0];
-
       const indexFNavImgName = firstNavigationImg.src.indexOf("images");
       const FNavImgName = firstNavigationImg.src.slice(indexFNavImgName);
       for (let x = 13; x < slideShow.scrolling.length; x++) {
