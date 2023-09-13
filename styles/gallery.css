@@ -238,10 +238,9 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.79);
   visibility: hidden;
-  display: none;
+  display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  /* align-items: center; */
   z-index: 9;
 }
 
@@ -268,6 +267,10 @@
 }
 
 .navigation_Stack {
+  position: fixed;
+  bottom: 5px;
+  left: 50%;
+  transform: translate(-50%);
   height: 10%;
   max-width: 95%;
   display: flex;

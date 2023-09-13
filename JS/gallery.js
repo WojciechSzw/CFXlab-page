@@ -78,12 +78,18 @@ function hideStack() {
 function photoLoader() {
   const loader = document.createElement("div");
   loader.classList.add("loader-box");
+  loader.style.width = "60px";
+  loader.style.height = "60px";
+  loader.style.borderRadius = "50%";
+  loader.style.display = "inline-block";
+  loader.style.borderTop = "3px solid #53fc1b";
+  loader.style.borderRight = "3px solid transparent";
+  loader.style.boxSizing = "border-box";
+  loader.style.animation = "rotation 1s linear infinite";
   loader.style.zIndex = "10";
-  loader.style.height = "300px";
-  loader.style.width = "300px";
   loader.style.position = "fixed";
-  loader.style.top = "0";
-  loader.style.backgroundColor = "red";
+  loader.style.top = "50%";
+  loader.style.left = "50%";
   document.querySelector("body").appendChild(loader);
 }
 function closePhotoLoader() {
