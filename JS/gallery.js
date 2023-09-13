@@ -76,7 +76,8 @@ function hideStack() {
 }
 
 function photoLoader() {
-  const loader = document.createElement("div");
+  closePhotoLoader();
+  const loader = document.createElement("span");
   loader.classList.add("loader-box");
   loader.style.width = "60px";
   loader.style.height = "60px";
@@ -94,7 +95,9 @@ function photoLoader() {
 }
 function closePhotoLoader() {
   const loaderToDel = document.querySelector("body .loader-box");
-  document.querySelector("body").removeChild(loaderToDel);
+  if (loaderToDel) {
+    document.querySelector("body").removeChild(loaderToDel);
+  }
 }
 
 function changeFullResImg(navImgSrc) {
