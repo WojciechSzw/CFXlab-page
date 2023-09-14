@@ -30,12 +30,13 @@ function hidePhoto() {
 }
 
 function showStack(thumbnailStack) {
-  photoLoader();
   const popupStack = document.getElementById("popup-stackimg");
   const navigationStack = document.getElementById("navigation_Stack");
 
   popupStack.style.visibility = "visible";
   popupStack.style.display = "flex";
+  popupStack.children[0].src = "images";
+  photoLoader();
   popupStack.children[0].src = thumbnailStack.children[0].src.replace(
     "Low",
     "Full"
@@ -89,8 +90,8 @@ function photoLoader() {
   loader.style.animation = "rotation 1s linear infinite";
   loader.style.zIndex = "10";
   loader.style.position = "fixed";
-  loader.style.top = "50%";
-  loader.style.left = "50%";
+  loader.style.top = "calc(50% - 30px)";
+  loader.style.left = "calc(50% - 30px)";
   document.querySelector("body").appendChild(loader);
 }
 function closePhotoLoader() {
@@ -101,6 +102,7 @@ function closePhotoLoader() {
 }
 
 function changeFullResImg(navImgSrc) {
+  document.getElementById("popupjpgFromStack").src = "images";
   photoLoader();
   document.getElementById("popupjpgFromStack").src = navImgSrc.replace(
     "Low",
@@ -195,14 +197,18 @@ const slideShow = {
     if (index === -1 || index === slideShow.scrolling.length) return;
     if (slideShow.scrolling[index][0] === "popup-singleimg") {
       hideStack();
-      photoLoader();
+
       const box = document.getElementById("popup-singleimg");
       const img = box.getElementsByTagName("img")[0];
       box.style.visibility = "visible";
       box.style.display = "flex";
-      img.src =
+      const srcNew =
         img.src.slice(0, img.src.indexOf("images")) +
         slideShow.scrolling[index][1];
+      img.src = "";
+      photoLoader();
+      img.src = srcNew;
+
       if (index === 0) {
         document.getElementById("leftArrow").style.visibility = "hidden";
       } else {
