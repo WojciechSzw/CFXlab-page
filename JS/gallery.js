@@ -47,8 +47,7 @@ function showStack(thumbnailStack) {
     child.src = thumbnailStack.children[j].src;
     child.style.visibility = "visible";
     child.style.display = "block";
-    child.style.maxWidth =
-      "calc(" + 100 / thumbnailStack.childElementCount + "%" + " - 5px)";
+    child.style.maxWidth = 100 / thumbnailStack.childElementCount + "%";
     j--;
   }
   if (thumbnailStack === document.getElementsByClassName("photos-stack")[7]) {

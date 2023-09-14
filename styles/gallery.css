@@ -146,7 +146,7 @@
   max-width: 90%;
   height: auto;
   width: auto;
-  z-index: 100;
+  z-index: 10;
 }
 
 .popup-singleimg > button {
@@ -156,6 +156,7 @@
   top: 40px;
   right: 40px;
   transform: translate(50%, -50%);
+  z-index: 1;
 }
 
 .popup-singleimg > button:hover {
@@ -164,6 +165,7 @@
 
 .fa-xmark {
   text-shadow: 0px 0px 30px var(--main-color-second);
+  z-index: 200;
 }
 
 @media only screen and (min-width: 980px) {
@@ -248,17 +250,18 @@
   visibility: hidden;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   z-index: 9;
 }
 
 #popupjpgFromStack {
-  margin-top: 1%;
-  max-height: 85%;
+  margin-top: auto;
+  max-height: 75%;
   max-width: 90%;
-  height: auto;
+  object-fit: contain;
   width: auto;
   z-index: 10;
+  margin-bottom: auto;
 }
 
 .popup-stackimg > button {
@@ -280,12 +283,11 @@
   left: 50%;
   transform: translate(-50%);
   height: 10%;
-  max-width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-  margin: 10px;
   z-index: 10;
 }
 .navigation_Stack > img {
@@ -293,6 +295,7 @@
   visibility: hidden;
   display: none;
   height: 100%;
+  width: auto;
 }
 
 .navigation_Stack > img:hover {
@@ -312,7 +315,7 @@
   top: calc(50% - 24px);
   right: 20px;
   color: #53fc1b;
-  z-index: 100;
+  z-index: 10;
   text-shadow: 0px 0px 30px var(--main-color-second);
 }
 
@@ -321,7 +324,7 @@
   top: calc(50% - 24px);
   left: 20px;
   color: #53fc1b;
-  z-index: 100;
+  z-index: 10;
   text-shadow: 0px 0px 30px var(--main-color-second);
 }
 
