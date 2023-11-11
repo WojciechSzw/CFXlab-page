@@ -17,7 +17,8 @@ document
       },
       (err) => {
         btn.value = "Wyślij";
-        alert(JSON.stringify(err));
+        alert("Błąd, nie wysłano, przepraszamy.");
+        console.log(JSON.stringify(err));
       }
     );
   });
