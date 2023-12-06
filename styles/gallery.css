@@ -16,6 +16,7 @@
 /* GALLERY SECTION */
 
 .gallery-section {
+  padding-top: 30px;
   display: flex;
   width: 90vw;
   max-width: 1600px;

@@ -5,7 +5,7 @@
     <meta name="author" content="wojciechszwarc" />
     <meta name="description" content="cfxlabpage" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CFX Oferta</title>
+    <title>CFX Usługi</title>
     <link rel="icon" href="images/logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/offer.css" />
@@ -23,6 +23,7 @@
       rel="stylesheet"
     />
   </head>
+
   <body class="background-fade">
     <nav class="topbar-flex nav-fade">
       <a href="index.html">
@@ -34,7 +35,7 @@
       </a>
       <div class="blackout-body-navlist" id="blackout-body-navlist"></div>
       <ul class="nav-list" id="nav-list">
-        <li><a class="nav-chosen" href="offer.html">Oferta</a></li>
+        <li><a class="nav-chosen" href="offer.html">Usługi</a></li>
         <li><a href="gallery.html">Galeria</a></li>
         <li><a href="team.html">Zespół</a></li>
         <li><a href="contact.html">Kontakt</a></li>
@@ -46,7 +47,25 @@
     </nav>
     <h1 class="page-title">Nasze usługi</h1>
     <section class="offer-section">
-      <ul class="offer-list">
+      <h2 class="page-undertitle">
+        Nasza pracownia specjalizuje się w odbudowach wysokoesetycznych z tlenku
+        cyrkonu oraz dwukrzemianu litu oraz implantoprotetyce. Dla Państwa
+        wygody pracujemy zarówno na modelach cyfrowych jak i analogowych.
+        Współpracując z Artizmo Wax-up Studio z Warszawy tworzymy
+        niepowtarzalne, funkcjonalne i estetyczne odbudowy całych łuków
+        zębowych.
+      </h2>
+      <figure class="offer-photo-box">
+        <img
+          class="offer-jpg"
+          src="/images/gallery/main/gallery_8Low.jpg"
+          alt="gallery jpg"
+        />
+        <div class="jpg-hover">
+          <a class="underphoto-a" href="gallery.html">Galeria</a>
+        </div>
+      </figure>
+      <!-- <ul class="offer-list">
         <li>Korona cercon</li>
         <hr class="li-divider" />
         <li>Licówka na masie osłaniającej</li>
@@ -88,13 +107,20 @@
         <li>Kolor z protokołem elab</li>
         <hr class="li-divider" />
         <li>Wax - up</li>
-      </ul>
+      </ul> -->
       <hr class="list-hr" />
       <p class="under-list">
         Po wycenę usług prosimy o
         <a class="contact-anchor" href="contact.html">kontakt</a>.
       </p>
     </section>
+    <script>
+      document.addEventListener("click", (event) => {
+        if (event.target.classList.contains("jpg-hover")) {
+          window.location.href = "gallery.html";
+        }
+      });
+    </script>
     <script src="JS/navbar.js"></script>
   </body>
 </html>
