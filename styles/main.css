@@ -169,7 +169,7 @@ body {
 
 .page-undertitle {
   font-weight: 300;
-  width: 90%;
+  width: 70%;
   max-width: 1100px;
   color: white;
   margin: 0px auto 30px;
@@ -305,7 +305,7 @@ body {
   }
 
   .page-undertitle {
-    width: 90%;
+    width: 80%;
     max-width: 1100px;
     margin: 0px auto 30px;
     font-size: 20px;
